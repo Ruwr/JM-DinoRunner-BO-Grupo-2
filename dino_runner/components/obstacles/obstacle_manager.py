@@ -1,5 +1,4 @@
 import random
-from dino_runner.components import Game, game
 from dino_runner.components.obstacles.bird import Bird
 from dino_runner.components.obstacles.cactus import Cactus
 from dino_runner.components.obstacles.obstacles import Obstacle
@@ -10,7 +9,7 @@ class ObstacleManage():
     def __init__(self):
         self.obstacles = []
 
-    def update(self):
+    def update(self, game):
         if len(self.obstacles) == 0:
             cactus_size = random.randint(0,1)
             if cactus_size == 0:
